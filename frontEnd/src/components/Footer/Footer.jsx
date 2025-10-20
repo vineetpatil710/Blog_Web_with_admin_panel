@@ -5,7 +5,7 @@ import React, { useState, useEffect, useCallback ,useRef} from 'react';
 
 import axios from 'axios';
 
-const api ='http://localhost:5000';
+const api ='https://blog-web-with-admin-panel.onrender.com';
 const Footer = () => {
     const [Footer, setFooter] = useState([]);
 
