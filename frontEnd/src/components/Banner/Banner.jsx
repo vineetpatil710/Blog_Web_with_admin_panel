@@ -12,7 +12,7 @@ function Banner() {
     const fetchBanners = async () => {
       try {
         // Make sure the URL matches your backend server's address and port
-        const response = await axios.get('http://localhost:5000/banners');
+        const response = await axios.get('https://blog-web-with-admin-panel.onrender.com/banners');
         setBanners(response.data);
       } catch (err) {
         console.error('Error fetching banners:', err);
@@ -33,7 +33,7 @@ function Banner() {
 
   const slidesData = banners.map((banner) => ({
 
-    image: `http://localhost:5000/${banner.imageUrl}`,
+    image: `https://blog-web-with-admin-panel.onrender.com/${banner.imageUrl}`,
     tagline: banner.tagline,
     message: banner.message
   }));
