@@ -20,7 +20,7 @@ function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/contact', formData);
+      await axios.post('https://blog-web-with-admin-panel.onrender.com/api/contact', formData);
       alert('Message sent successfully!');
       setFormData({ name: '', email: '', subject: '', message: '' }); // Clear form
     } catch (err) {
