@@ -12,7 +12,7 @@ function TrendingBlogs() {
     const fetchBanners = async () => {
       try {
         // Make sure the URL matches your backend server's address and port
-        const response = await axios.get('http://localhost:5000/trendingblogs');
+        const response = await axios.get('https://blog-web-with-admin-panel.onrender.com/trendingblogs');
         setBanners(response.data);
       } catch (err) {
         console.error('Error fetching banners:', err);
@@ -33,7 +33,7 @@ const blogPosts = banners.map((banner) => ({
      title:  banner.BlogTitle,
       rating: banner.AgeRatings,
       date: '1 hour ago',
-      image:  `http://localhost:5000${banner.imageUrl}`,
+      image:  `https://blog-web-with-admin-panel.onrender.com${banner.imageUrl}`,
 
 }));
 
