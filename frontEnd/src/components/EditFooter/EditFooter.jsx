@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://blog-web-with-admin-panel.onrender.com';
 
 function EditFooter() {
   const [formData, setFormData] = useState({
