@@ -17,7 +17,7 @@ function AboutUsPage() {
     const fetchBanners = async () => {
       try {
         // Make sure the URL matches your backend server's address and port
-        const response = await axios.get('http://localhost:5000/AboutText');
+        const response = await axios.get('https://blog-web-with-admin-panel.onrender.com/AboutText');
         setBanners(response.data);
       } catch (err) {
         console.error('Error fetching banners:', err);
@@ -35,7 +35,7 @@ function AboutUsPage() {
     const fetchBanners = async () => {
       try {
         // Make sure the URL matches your backend server's address and port
-        const response = await axios.get('http://localhost:5000/AboutCard');
+        const response = await axios.get('https://blog-web-with-admin-panel.onrender.com/AboutCard');
         setAboutCard(response.data);
       } catch (err) {
         console.error('Error fetching banners:', err);
@@ -53,7 +53,7 @@ const cardData = AboutCard.map((banner) => ({
 
    category: banner.category,
     title: banner.title,
-    imageUrl:  `http://localhost:5000/${banner.imageUrl}`,
+    imageUrl:  `https://blog-web-with-admin-panel.onrender.com/${banner.imageUrl}`,
 }));
 
   
