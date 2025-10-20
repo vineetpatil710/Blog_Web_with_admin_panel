@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const API = 'http://localhost:5000';
+const API = 'https://blog-web-with-admin-panel.onrender.com';
 
 function EditMonetizationBlog() {
   const [formData, setFormData] = useState({ EditMonetizationBlog: '' });
