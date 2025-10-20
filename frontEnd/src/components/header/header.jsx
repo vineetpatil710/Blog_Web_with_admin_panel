@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://blog-web-with-admin-panel.onrender.com';
 function Header() {
 
   const [banners, setBanners] = useState([]);
