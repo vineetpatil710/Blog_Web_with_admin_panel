@@ -12,7 +12,7 @@ export default function BlogCategory() {
     const fetchBanners = async () => {
       try {
         // Make sure the URL matches your backend server's address and port
-        const response = await axios.get('http://localhost:5000/BlogCategories');
+        const response = await axios.get('https://blog-web-with-admin-panel.onrender.com/BlogCategories');
         setBanners(response.data);
       } catch (err) {
         console.error('Error fetching banners:', err);
@@ -26,7 +26,7 @@ export default function BlogCategory() {
 const blogPosts =banners.map((banner) => ({
   id: banner._id,
         category:banner.category,
-        imageUrl:  `http://localhost:5000${banner.imageUrl}`,
+        imageUrl:  `https://blog-web-with-admin-panel.onrender.com${banner.imageUrl}`,
         title: banner.title,
         author: banner.author,
         date: banner.date,
