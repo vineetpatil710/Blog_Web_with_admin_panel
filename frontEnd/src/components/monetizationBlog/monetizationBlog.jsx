@@ -14,7 +14,7 @@ function MonetizationBlog() {
     const fetchBanners = async () => {
       try {
         // Make sure the URL matches your backend server's address and port
-        const response = await axios.get('http://localhost:5000/EditMonetizationget');
+        const response = await axios.get('https://blog-web-with-admin-panel.onrender.com/EditMonetizationget');
         setBanners(response.data);
       } catch (err) {
         console.error('Error fetching banners:', err);
