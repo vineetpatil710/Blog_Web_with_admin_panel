@@ -1,0 +1,140 @@
+.admin-panel {
+  padding: 20px;
+  background-color: #2c3e50; /* A dark background for the panel */
+  color: #ecf0f1;
+  font-family: sans-serif;
+  min-height: 100vh;
+  margin-top: 4.8vw;
+}
+
+.editor-section {
+  background-color: #34495e;
+  padding: 20px;
+ 
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 1px solid #4a627a;
+}
+
+.editor-section h2 {
+
+  border-bottom: 2px solid #e74c3c;
+  padding-bottom: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group, .form-group-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #4a627a;
+  border-radius: 5px;
+}
+::placeholder {
+  color: white;
+}
+
+
+.form-group select[type="select"],
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group-grid input[type="text"],
+.form-group-grid textarea {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #7f8c8d;
+  background-color: #4a627a;
+  color: #ecf0f1;
+}
+
+.app-container {
+  margin-top: 15px;
+}
+
+.editor-card {
+  background-color: #2c3e50;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.blog-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.blog-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-preview {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ecf0f1;
+  border-radius: 4px;
+}
+
+/* New styles for the navigation buttons */
+.admin-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #4a627a;
+}
+
+.admin-nav button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-nav button:hover {
+  background-color: #2980b9;
+}
+.admin-title{
+  text-align: center;
+}
+
+/* Style for the active button */
+.admin-nav button.active {
+  background-color: #e74c3c;
+  font-weight: bold;
+}
+ /* Styled submit button */
+    .submit-btn {
+     
+    
+      display: flex;
+  justify-content: center;
+ 
+
+      max-width: 200px;
+      padding: 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 1vw;
+     
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }

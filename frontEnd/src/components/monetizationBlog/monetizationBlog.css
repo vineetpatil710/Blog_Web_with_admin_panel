@@ -1,0 +1,61 @@
+.monetization-container {
+    
+      border-radius: 1vw;
+      padding: 1vw;
+      max-width: 90%;
+      margin: 0rem auto;
+      margin-bottom: 2vw;
+      font-family: sans-serif;
+      background-color: #e3e1de;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .monetization-header {
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 1px solid #000000;
+      padding-bottom: 15px;
+    }
+
+    .monetization-header h1 {
+      font-size: 1.8rem;
+      color: #333;
+      text-transform: capitalize;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .monetization-content {
+      position: relative;
+      min-height: 150px; /* Ensure there is space for the content and button */
+    }
+
+    .monetization-content h2 {
+      font-size: 1.3rem;
+      color: #444;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .button-container {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .learn-more-btn {
+      background-color: #ffffff;
+      border: 2px solid #555;
+      border-radius: 20px;
+      padding: 8px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .learn-more-btn:hover {
+      background-color: #333;
+      color: #ffffff;
+    }

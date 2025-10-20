@@ -1,0 +1,22 @@
+.menu-icon {
+  position: fixed;
+  top: 7vw;
+ 
+  right: 3vw;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Bar Style */
+.bar {
+  width: 1.75vw;
+  height: 0.38vw;
+  background-color: rgb(255, 255, 255);
+  margin: 0.4vw 0;
+  transition: background-color 0.3s;
+}
+
+/* Hover both bars when hovering parent */
+.menu-icon:hover .bar {
+  background-color: #fff9cb;
+}

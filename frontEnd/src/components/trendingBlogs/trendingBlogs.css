@@ -1,0 +1,279 @@
+.trending_blog_animation {
+  position: absolute;
+  top: 100%;
+  right: 19vw;
+}
+
+#chevron-down {
+  width: 1vw;
+  height: 1vw;
+  border-right: 0.3vw solid white;
+  border-bottom: 0.3vw solid white;
+  transform: rotate(45deg);
+  position: relative;
+  right: -0.3vw;
+  top: -0.2vw;
+  position: relative;
+  right: 0.01vw;
+}
+
+
+/* General container styling */
+.trending-container {
+  width: 90%;
+  border-radius: 1vw;
+  margin: 0 auto;
+  padding: 1vw 2vw;
+  background-color: #e3e1de;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* Hide anything that might poke out */
+}
+
+/* Header styling */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tagBody {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.taglinee {
+  background-color: #e76f51;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #264653;
+  margin: 0;
+}
+
+/* Carousel wrapper for positioning arrows */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* The scrollable carousel container */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+  /* Add some space for shadow and scrollbar hiding */
+  margin: 0 -10px;
+  /* Counteract card margin */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual blog card styling */
+.blog-card {
+  position: relative;
+  flex: 0 0 320px;
+  /* Prevents shrinking, sets a fixed base width */
+  height: 450px;
+  margin: 0 10px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.blog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover .blog-image {
+  transform: scale(1.05);
+}
+
+/* Overlay for content and icons */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+}
+
+/* Icons styling */
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.blog-card:hover .icons {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.icon-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  /* Icon size */
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s ease;
+}
+
+.icon-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.icon-btn.play-btn {
+  background-color: #e76f51;
+}
+
+.icon-btn.play-btn:hover {
+  background-color: #f4a261;
+}
+
+/* Blog title and date styling */
+.blog-content {
+  transform: translateY(calc(100% - 100px));
+  /* Start with content mostly hidden */
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover .blog-content {
+  transform: translateY(0);
+}
+
+.blog-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.title-date {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.rating {
+  background-color: #f4a261;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.date {
+  opacity: 0.8;
+}
+
+/* Arrow buttons styling */
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-color: white;
+  color: #264653;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.arrow-button:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-button:active {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.arrow-button.left {
+  left: -25px;
+}
+
+.arrow-button.right {
+  right: -25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .blog-card {
+    flex-basis: 280px;
+    height: 400px;
+  }
+
+  .arrow-button {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  .arrow-button.left {
+    left: 5px;
+  }
+
+  .arrow-button.right {
+    right: 5px;
+  }
+}

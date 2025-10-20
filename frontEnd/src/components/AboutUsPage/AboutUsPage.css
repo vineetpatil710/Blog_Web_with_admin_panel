@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+  .about-us-body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-us-page {
+    width: 100%;
+  }
+
+  .hero-section {
+    /* background-color: #c72129; */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  .hero-section .subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #1e1c1f;
+     text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .hero-section .title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1e1c1f;
+    line-height: 1.1;
+    margin: 0 auto 16px;
+    max-width: 800px;
+  }
+
+  .hero-section .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+
+  .cards-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Makes cards same height */
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 60px 20px;
+    /* background-color: #c72129; */
+    margin-top: -1px; /* Prevents tiny gaps between sections */
+  }
+
+  .info-card {
+    background-color: white;
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures image corners are rounded */
+  }
+
+  .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .info-card .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .info-card .card-content {
+    padding: 24px;
+    flex-grow: 1; /* Allows content to fill space */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-card .card-category {
+    color: #6c757d;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .info-card .card-title {
+    color: #212529;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+    flex-grow: 1; /* Pushes icon to the bottom */
+    margin-bottom: 16px;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .card-link-icon {
+    width: 24px;
+    height: 24px;
+    color: #007bff;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .cards-section {
+      padding: 60px 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section .title {
+      font-size: 2.5rem;
+    }
+    .hero-section .description {
+      font-size: 1rem;
+    }
+    .info-card {
+      width: 100%;
+      max-width: 400px;
+    }
+  }

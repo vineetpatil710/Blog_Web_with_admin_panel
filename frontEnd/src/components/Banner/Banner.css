@@ -1,0 +1,223 @@
+/* Main container for the banner, which clips the content */
+.banner-container {
+  height: 70vh;
+  /* You can adjust the height */
+  min-height: 450px;
+  width: 100%;
+
+  margin-top: 0px;
+  position: relative;
+  /* Essential for positioning child elements */
+  overflow: hidden;
+  /* Hides the other slides */
+  background-color: #f0f0f0;
+  /* Fallback color */
+  border: none;
+  box-sizing: border-box;
+  /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* This wrapper holds all slides and moves horizontally */
+.banner-wrapper {
+  display: flex;
+  height: 100%;
+  transition: transform 0.7s ease-in-out;
+  /* The sliding animation */
+}
+
+/* Individual slide styling */
+.banner-slide {
+  flex: 0 0 100%;
+  /* Each slide takes up the full container width */
+  height: 100%;
+  max-width: 100%;
+  margin-top: 4.9vw;
+  background-size: cover;
+  background-position: center;
+
+  /* For the overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 100;
+  text-align: center;
+}
+
+/* Dark overlay for better text readability on images */
+
+
+/* Content inside the slide (tagline, message, button) */
+.slide-content {
+  position: relative;
+  /* To appear above the overlay */
+
+  padding: 1.56vw;
+  max-width: 90%;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.welcome-message {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0 25px 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Call-to-action button */
+.cta-button {
+  background-color: transparent;
+  color: white;
+  padding: 12px 28px;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: black;
+}
+
+#l-a:hover {
+  color: #c12929;
+}
+
+#r-a:hover {
+  color: #c12929;
+}
+
+/* Navigation arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: black;
+  background-color: white;
+  width: 2.5vw;
+  height: 2.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1;
+}
+
+.left-arrow {
+  left: 1vw;
+}
+
+.right-arrow {
+  right: 1vw;
+}
+
+/* Section below the banner */
+.about-section {
+  padding: 2vw;
+  text-align: left;
+  min-height: 30vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-section {
+  width: 60%;
+  padding: 0.1rem;
+}
+.vLogo {
+  width: 30%;
+ 
+}
+
+.huncwot-logo-container {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.about-section {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 3vw;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .welcome-message {
+    font-size: 1.8rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+}
+
+/* src/components/HuncwotLogoAnimation.css */
+
+.huncwot-logo-container {
+  width: 300px;
+  height: 300px;
+
+}
+
+.huncwot-path {
+  stroke-dasharray: 265;
+  stroke-dashoffset: 265;
+  animation: draw-in 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes draw-in {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.vLogo {
+  width: 30%;
+  padding: 0;
+  margin: 0;
+}
