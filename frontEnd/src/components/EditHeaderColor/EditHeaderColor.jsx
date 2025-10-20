@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://blog-web-with-admin-panel.onrender.com';
 
 function EditHeaderColor() {
   const [selectedColor, setSelectedColor] = useState('#ffffff');
