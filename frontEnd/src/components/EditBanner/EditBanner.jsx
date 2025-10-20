@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 
 // API base URL for backend
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://blog-web-with-admin-panel.onrender.com';
 
 function EditBanner() {
   // ✅ Function to delete a banner by ID
