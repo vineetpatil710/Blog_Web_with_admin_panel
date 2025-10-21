@@ -11,6 +11,9 @@ npm install     # first time only
 node server.js  
 Keep both terminals open.
 
+# Open the page In your browser for Admin Panel → (http://localhost:3000/AdminPanel)
+
+
 
 About MERN app  
 Blog Website with admin panel
