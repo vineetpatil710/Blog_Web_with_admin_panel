@@ -39,7 +39,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Categories" element={<Categories />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/AdminPanel" element={<AdminPanel />} />
+          <Route path="/Admin" element={<AdminPanel />} />
         </Routes>
       </div>
     </>
