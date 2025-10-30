@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from "../localhost/localhost.jsx";   
 
-
-const API_URL = 'https://blog-web-with-admin-panel.onrender.com'; // Your API endpoint
+const API_URL =`${BASE_URL}`; // Your API endpoint
 
 function EditAboutText() {
   const [formData, setFormData] = useState({

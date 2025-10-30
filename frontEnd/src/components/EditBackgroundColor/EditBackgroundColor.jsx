@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
-const API_URL = 'https://blog-web-with-admin-panel.onrender.com';
+import { BASE_URL } from "../localhost/localhost.jsx";   
+const API_URL = `${BASE_URL}`;
 
 function EditBackgroundColor() {
   const [color, setColor] = useState('#ffffff');
@@ -46,14 +46,14 @@ function EditBackgroundColor() {
           value={color}
           onChange={(e) => setColor(e.target.value)}
           style={{
-    width: '60px',
-    height: '40px',
-    border: 'none',
-    cursor: 'pointer',
-    backgroundColor: '#fff',
-    borderRadius: '6px',
-    boxShadow: '0 0 4px rgba(0,0,0,0.2)',
-  }}
+            width: '60px',
+            height: '40px',
+            border: 'none',
+            cursor: 'pointer',
+            backgroundColor: '#fff',
+            borderRadius: '6px',
+            boxShadow: '0 0 4px rgba(0,0,0,0.2)',
+          }}
         />
         <button type="submit" className="submit-btn">
           Save Color

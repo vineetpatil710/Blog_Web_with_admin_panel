@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './Banner.css';
 import axios from 'axios';
-
+import { BASE_URL } from "../localhost/localhost.jsx";    
 
 
 function Banner() {
@@ -12,7 +12,7 @@ function Banner() {
     const fetchBanners = async () => {
       try {
         // Make sure the URL matches your backend server's address and port
-        const response = await axios.get('https://blog-web-with-admin-panel.onrender.com/banners');
+        const response = await axios.get(`${BASE_URL}/banners`);
         setBanners(response.data);
       } catch (err) {
         console.error('Error fetching banners:', err);
@@ -33,7 +33,7 @@ function Banner() {
 
   const slidesData = banners.map((banner) => ({
 
-    image: `https://blog-web-with-admin-panel.onrender.com/${banner.imageUrl}`,
+    image: `${BASE_URL}/${banner.imageUrl}`,
     tagline: banner.tagline,
     message: banner.message
   }));

@@ -1,10 +1,10 @@
 // AdminPanel.js
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
-
+import { BASE_URL } from "../localhost/localhost.jsx";   
 // --- Configuration ---
 // Make sure this URL points to your backend server.
-const API_URL = 'https://blog-web-with-admin-panel.onrender.com';
+const API_URL = `${BASE_URL}`;
 
 function EditTrendingBlogs() {
   //✅ 1. Add the handleDelete function inside your AdminPanel component:

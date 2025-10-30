@@ -1,8 +1,8 @@
 // MonetizationBlog.js
-import React, { useState, useEffect, useCallback ,useRef} from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import './monetizationBlog.css'
 import axios from 'axios';
-
+import { BASE_URL } from "../localhost/localhost.jsx";   
 // CSS is included here to create a self-contained component.
 
 
@@ -14,21 +14,21 @@ function MonetizationBlog() {
     const fetchBanners = async () => {
       try {
         // Make sure the URL matches your backend server's address and port
-        const response = await axios.get('https://blog-web-with-admin-panel.onrender.com/EditMonetizationget');
+        const response = await axios.get(`${BASE_URL}/EditMonetizationget`);
         setBanners(response.data);
       } catch (err) {
         console.error('Error fetching banners:', err);
-      } 
+      }
     };
 
     fetchBanners();
   }, []);
 
-  
+
 
   return (
     <>
-  
+
       <div className="monetization-container">
         <header className="monetization-header">
           <h1>monetization blog</h1>

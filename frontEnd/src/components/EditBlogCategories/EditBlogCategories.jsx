@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
-
-const API_URL = 'https://blog-web-with-admin-panel.onrender.com';
+import { BASE_URL } from "../localhost/localhost.jsx";   
+const API_URL = `${BASE_URL}`;
 
 function EditBlogCategories() {
 

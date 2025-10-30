@@ -1,11 +1,11 @@
 
 import './header.css';
 import React, { useState, useEffect } from 'react';
-
+import { BASE_URL } from "../localhost/localhost.jsx";   
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
-const API_URL = 'https://blog-web-with-admin-panel.onrender.com';
+const API_URL = `${BASE_URL}`;
 function Header() {
 
   const [banners, setBanners] = useState([]);
@@ -28,7 +28,7 @@ function Header() {
 
 
 
-   const [Baground, setBaground ] = useState([]);
+  const [Baground, setBaground] = useState([]);
   useEffect(() => {
     const fetchBanners = async () => {
       try {
@@ -44,7 +44,7 @@ function Header() {
   }, []);
 
 
-  
+
 
 
 
@@ -63,13 +63,13 @@ function Header() {
         {/* <h1 >Blog name / logo</h1> */}
 
         <div className="company-logo">  {banners.length > 0 && (
-  <img
-    src={`http://localhost:5000/${banners[0].imageUrl}`}
-    alt="Blog Logo"
-    className="log_image"
-  />
-)}
-</div>
+          <img
+            src={`${BASE_URL}/${banners[0].imageUrl}`}
+            alt="Blog Logo"
+            className="log_image"
+          />
+        )}
+        </div>
       </div>
 
       {navLinks.map(link => (

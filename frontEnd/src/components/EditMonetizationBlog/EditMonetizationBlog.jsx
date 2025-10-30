@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
-const API = 'https://blog-web-with-admin-panel.onrender.com';
+import { BASE_URL } from "../localhost/localhost.jsx";   
+const API = `${BASE_URL}`;
 
 function EditMonetizationBlog() {
   const [formData, setFormData] = useState({ EditMonetizationBlog: '' });
@@ -46,21 +46,21 @@ function EditMonetizationBlog() {
   };
 
   return (
-     <div className="editor-section">
-    <form onSubmit={handleSubmit} className="form-group">
-      <h2>Edit Monetization Blog</h2>
-      <textarea
-        rows={10}
-        cols={100}
-        name="EditMonetizationBlog"
-        placeholder="Blog"
-        value={formData.EditMonetizationBlog }
-        onChange={handleInputChange}
-      />
-      <br />
-      <button className="submit-btn" type="submit">{blogId ? 'Update' : 'Create'}</button>
-      <p>{message}</p>
-    </form>
+    <div className="editor-section">
+      <form onSubmit={handleSubmit} className="form-group">
+        <h2>Edit Monetization Blog</h2>
+        <textarea
+          rows={10}
+          cols={100}
+          name="EditMonetizationBlog"
+          placeholder="Blog"
+          value={formData.EditMonetizationBlog}
+          onChange={handleInputChange}
+        />
+        <br />
+        <button className="submit-btn" type="submit">{blogId ? 'Update' : 'Create'}</button>
+        <p>{message}</p>
+      </form>
     </div>
   );
 }

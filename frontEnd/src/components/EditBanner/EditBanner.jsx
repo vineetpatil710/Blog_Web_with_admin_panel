@@ -1,14 +1,14 @@
 // Import necessary hooks and libraries
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
-
+import { BASE_URL } from "../localhost/localhost.jsx";   
 // API base URL for backend
-const API_URL = 'https://blog-web-with-admin-panel.onrender.com';
+const API_URL = `${BASE_URL}`;
 
 function EditBanner() {
   // ✅ Function to delete a banner by ID
   const handleDelete = async (bannerId) => {
-  
+
     const confirmDelete = window.confirm('Are you sure you want to delete this banner?');
     if (!confirmDelete) return;
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './contactUs.css';
 import { useState } from 'react';
 import axios from 'axios';
-
+import { BASE_URL } from "../localhost/localhost.jsx";   
 
 function ContactUs() {
 
@@ -20,7 +20,7 @@ function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://blog-web-with-admin-panel.onrender.com/api/contact', formData);
+      await axios.post(`${BASE_URL}/api/contact`, formData);
       alert('Message sent successfully!');
       setFormData({ name: '', email: '', subject: '', message: '' }); // Clear form
     } catch (err) {

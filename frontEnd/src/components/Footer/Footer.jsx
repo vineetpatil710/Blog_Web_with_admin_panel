@@ -1,13 +1,13 @@
 
 import './Footer.css'; // Import the CSS file
-
-import React, { useState, useEffect, useCallback ,useRef} from 'react';
+import { BASE_URL } from "../localhost/localhost.jsx";   
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 import axios from 'axios';
 
-const api ='https://blog-web-with-admin-panel.onrender.com';
+const api = `${BASE_URL}`;
 const Footer = () => {
-    const [Footer, setFooter] = useState([]);
+  const [Footer, setFooter] = useState([]);
 
 
   useEffect(() => {
@@ -18,41 +18,41 @@ const Footer = () => {
         setFooter(response.data);
       } catch (err) {
         console.error('Error fetching banners:', err);
-      } 
+      }
     };
 
     fetchBanners();
   }, []);
 
-  
+
 
 
 
   return (
- <footer className="footer"   style={{ backgroundColor: Footer.color }}>
-  <div className="footer-container">
+    <footer className="footer" style={{ backgroundColor: Footer.color }}>
+      <div className="footer-container">
 
-    {/* Top Section: Text */}
-    <div className="footer-left">
-      © {new Date().getFullYear()} Your Company. All rights reserved.
-    </div>
+        {/* Top Section: Text */}
+        <div className="footer-left">
+          © {new Date().getFullYear()} Your Company. All rights reserved.
+        </div>
 
-    {/* Bottom Section: Social Links */}
-    <div className="footer-links">
-      <a href={Footer.text1} target="_blank" rel="noopener noreferrer">
-        <button>Twitter</button>
-      </a>
-      <a href={Footer.text2} target="_blank" rel="noopener noreferrer">
-        <button>LinkedIn</button>
-      </a>
-  
-      <a href={Footer.text3} target="_blank" rel="noopener noreferrer" >
-        <button>Email</button>
-      </a>
-    </div>
+        {/* Bottom Section: Social Links */}
+        <div className="footer-links">
+          <a href={Footer.text1} target="_blank" rel="noopener noreferrer">
+            <button>Twitter</button>
+          </a>
+          <a href={Footer.text2} target="_blank" rel="noopener noreferrer">
+            <button>LinkedIn</button>
+          </a>
 
-  </div>
-</footer>
+          <a href={Footer.text3} target="_blank" rel="noopener noreferrer" >
+            <button>Email</button>
+          </a>
+        </div>
+
+      </div>
+    </footer>
 
   );
 };

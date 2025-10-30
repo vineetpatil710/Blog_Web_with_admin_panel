@@ -1,14 +1,14 @@
 // Import necessary hooks and libraries
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
-
+import { BASE_URL } from "../localhost/localhost.jsx";   
 // API base URL for backend
-const API_URL = 'https://blog-web-with-admin-panel.onrender.com';
+const API_URL = `${BASE_URL}`;
 
 function EditAboutCard() {
   // ✅ Function to delete a banner by ID
   const handleDelete = async (bannerId) => {
-  
+
     const confirmDelete = window.confirm('Are you sure you want to delete this banner?');
     if (!confirmDelete) return;
 
@@ -32,7 +32,7 @@ function EditAboutCard() {
   const [banners, setBanners] = useState([]); // List of all banners
   const [selectedBannerId, setSelectedBannerId] = useState('Create'); // For edit/create dropdown
   const [formData, setFormData] = useState({
-     category: '',
+    category: '',
     title: '',
 
   });
@@ -91,7 +91,7 @@ function EditAboutCard() {
         setFormData({
           category: selected.category,
           title: selected.title,
-       
+
         });
         setSelectedFile(null); // Reset file input
       }
@@ -105,7 +105,7 @@ function EditAboutCard() {
     setSuccess('');
 
     // 🛑 Validate inputs
-    if (!formData.category || !formData.title ) {
+    if (!formData.category || !formData.title) {
       setError('All text fields must be filled.');
       return;
     }
@@ -119,7 +119,7 @@ function EditAboutCard() {
     const data = new FormData();
     data.append('category', formData.category);
     data.append('title', formData.title);
-  
+
     if (selectedFile) {
       data.append('bannerImage', selectedFile); // Key must match multer config
     }
@@ -128,7 +128,7 @@ function EditAboutCard() {
       let response;
       if (selectedBannerId === 'Create') {
         // 🔨 CREATE new banner
-          console.log(data)
+        console.log(data)
         response = await axios.post(`${API_URL}/api/AboutCard`, data, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
@@ -209,7 +209,7 @@ function EditAboutCard() {
           onChange={handleInputChange}
         />
 
-     
+
 
         {/* File input for image */}
         <label>Banner Image</label>
