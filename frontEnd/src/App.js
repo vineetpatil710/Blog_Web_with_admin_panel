@@ -38,8 +38,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Categories" element={<Categories />} />
-          <Route path="/C" element={<Contact />} />
-          <Route path="/Admin" element={<AdminPanel />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/AdminPanel" element={<AdminPanel />} />
         </Routes>
       </div>
     </>
